@@ -4,10 +4,10 @@ import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
-public class dropwizard-templateApplication extends Application<dropwizard-templateConfiguration> {
+public class DWApplication extends Application<DWConfiguration> {
 
     public static void main(final String[] args) throws Exception {
-        new dropwizard-templateApplication().run(args);
+        new DWApplication().run(args);
     }
 
     @Override
@@ -16,12 +16,12 @@ public class dropwizard-templateApplication extends Application<dropwizard-templ
     }
 
     @Override
-    public void initialize(final Bootstrap<dropwizard-templateConfiguration> bootstrap) {
+    public void initialize(final Bootstrap<DWConfiguration> bootstrap) {
         // TODO: application initialization
     }
 
     @Override
-    public void run(final dropwizard-templateConfiguration configuration,
+    public void run(final DWConfiguration configuration,
                     final Environment environment) {
         // TODO: implement application
     }

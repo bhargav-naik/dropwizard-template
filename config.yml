@@ -1,4 +1,22 @@
-logging:
-  level: INFO
-  loggers:
-    dropwizard-template: DEBUG
+server:
+  maxThreads: 1024
+  applicationConnectors:
+    - type: http
+      port: 13300
+      acceptorThreads: 12
+      selectorThreads: 25
+  adminConnectors:
+    - type: http
+      port: 13301
+
+#requestLog:
+#  timeZone: IST
+#  appenders:
+#    - type: file-size-rolled
+#      logFormat: "%-5p [%d{ISO8601}] [%t] [%mdc{X-Request-Host}] %c{32}: %m%n%rEx"
+#      currentLogFilename: /var/log/ganesha/dw-service/request.log
+#      archive: true
+#      archivedLogFilenamePattern: /var/log/ganesha/dw-service/request-%i.log.gz
+#      maxFileSize: 768MB
+#      archivedFileCount: 3
+#      timeZone: IST
