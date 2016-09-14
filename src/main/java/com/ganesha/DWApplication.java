@@ -1,5 +1,6 @@
 package com.ganesha;
 
+import com.ganesha.resources.UserResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -23,7 +24,9 @@ public class DWApplication extends Application<DWConfiguration> {
     @Override
     public void run(final DWConfiguration configuration,
                     final Environment environment) {
-        // TODO: implement application
+        final UserResource userResource = new UserResource();
+        environment.jersey().register(userResource);
+
     }
 
 }
